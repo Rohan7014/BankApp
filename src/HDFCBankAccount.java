@@ -1,8 +1,9 @@
+import java.util.UUID;
+
 public class HDFCBankAccount implements BankAccount{
     private String accountNumber;
     private int balance;
     private int roi; // 5% - 5
-
     public HDFCBankAccount(int balance) {
         this.balance = balance;
         this.accountNumber = String.valueOf(UUID.randomUUID());
@@ -14,7 +15,6 @@ public class HDFCBankAccount implements BankAccount{
         this.accountNumber = String.valueOf(UUID.randomUUID());
         this.roi = roi;
     }
-
     public int getBalance() {
         return balance;
     }
@@ -68,5 +68,4 @@ public class HDFCBankAccount implements BankAccount{
     // min balance = 500
     // roi should be dependent on age more age -> more roi
 
-}
 }
